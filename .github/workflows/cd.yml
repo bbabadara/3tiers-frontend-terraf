@@ -38,5 +38,5 @@ jobs:
 
           script: |
             cd /home/${{ secrets.EC2_USER }}/app
-            docker compose pull frontend
-            docker compose up -d frontend --pull always
+            docker-compose pull frontend
+            docker-compose up -d --force-recreate frontend
